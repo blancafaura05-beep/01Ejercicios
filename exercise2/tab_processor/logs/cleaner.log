@@ -1,0 +1,4 @@
+2025-11-05 20:18:12 INFO     Cleaner started at 2025-11-05 20:18:12.411767
+2025-11-05 20:18:12 INFO     Skipping catalog file: ./files/catalog.json
+2025-11-05 20:18:12 INFO     Skipping catalog file: ./files/cleaned\catalog.json
+2025-11-05 20:18:12 INFO     Processing files... -> ./files/songs\abel_pintos\abismo.txt

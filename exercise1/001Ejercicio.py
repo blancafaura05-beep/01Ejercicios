@@ -15,12 +15,13 @@ download_uris = [
 ]
 
 
-DOWNLOAD_DIR = "downloads"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # ruta del archivo actual
+DOWNLOAD_DIR = os.path.join(BASE_DIR, "downloads")
 
 
 # creates the folder if it doesn't exist
 if not os.path.exists(DOWNLOAD_DIR):
-    os.makedirs(DOWNLOAD_DIR)
+    os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 
 
 # download and unzip each file
