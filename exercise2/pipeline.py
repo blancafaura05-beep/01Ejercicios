@@ -14,9 +14,7 @@ logging.basicConfig(
 )
 
 def run_step(name, command):
-    """
-    Ejecuta un módulo y registra si falla.
-    """
+    
     logging.info(f"Starting: {name}")
 
     try:
