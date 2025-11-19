@@ -2,6 +2,7 @@
 ## Check the logs for something strange. Try to know where those messages come from. No need to solve it, only get the origin. (0.5 points)
 
 2025-11-03 15:44:58 INFO     song --> 3 - url --> https://acordes.lacuerda.net/abel_pintos/3.shtml
+
 2025-11-03 15:45:08 INFO     song --> 5 Siglos Igual - url --> https://acordes.lacuerda.net/abel_pintos/5_siglos_igual.shtml
 
 
