@@ -20,22 +20,12 @@ dir_list = list()
 
 def validate_song_format(song):
     """Validates if the song follows a basic expected format."""
-    #aditional rule :validates if song is empty or short
+    # Aditional rule: validates if song is empty or short
     if len(song.strip().splitlines()) < 5:
         return False
     
-    # Regex pattern for song format
-    pattern = r"((?:[A-Z]+\s+)*\n.+)+"
-
-    # Check if the song matches the pattern
-    match = re.fullmatch(pattern, song, flags=re.DOTALL)
-
-    # If there is a match, the song is in the correct format
-    if match:
-        return True
-    else:
-        return False
-
+    # Ya no usamos regex
+    return True
 
 def list_files_recursive(path: str = "."):
     """Lists all files in a directory recursively."""
