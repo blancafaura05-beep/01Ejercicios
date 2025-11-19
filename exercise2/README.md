@@ -19,3 +19,7 @@ I decided to delete those lines so they don't cause problems. I delete them dire
 
 ##  Propose any change to make the code cleaner, clearer and better. (0.5 points).
 One way to improve the code is to make it cleaner and more organized by reducing repetition and structuring it more clearly. For example, some repeated tasks could be moved into separate helper functions. This would make the code easier to read, understand, and maintain, while also making it simpler to extend or improve in the future. Overall, these changes would increase clarity and make the project more professional.
+
+
+# clarifications of tab_validator
+The rule that was already in place did not send any songs to validated ok, so lyrics did not work. It is not a problem with the number of songs, but rather that it is a very strict rule, and in this case there were no songs that complied with it. Therefore, there were two options: either create the folder manually so that the error would not occur, but then there would be nothing inside, or remove that rule. In this case, I decided to remove that rule because it was too strict, and I left only the additional one that I created.
