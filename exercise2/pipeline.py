@@ -14,7 +14,9 @@ logging.basicConfig(
 )
 
 def run_step(name, command):
-    
+    """
+    Ejecuta un módulo y registra si falla.
+    """
     logging.info(f"Starting: {name}")
 
     try:
@@ -23,4 +25,19 @@ def run_step(name, command):
     except Exception as e:
         logging.error(f"FAILED: {name} - {str(e)}")
         print(f"ERROR in {name}. Check pipeline.log")
-        raise  
+        raise 
+
+def main():
+    logging.info("Pipeline execution started")
+
+    run_step("SCRAPPER", ["python", "scrapper/main.py"])
+    run_step("CLEANER", ["python", "tab_cleaner/main.py"])
+    run_step("VALIDATOR", ["python", "tab_validator/main.py"])
+    run_step("RESULTS", ["python", "results/main.py"])
+    run_step("LYRICS", ["python", "lyrics/main.py"])
+    run_step("INSIGHTS", ["python", "insights/main.py"])
+
+    logging.info("Pipeline execution finished successfully")
+
+if __name__ == "__main__":
+    main()
