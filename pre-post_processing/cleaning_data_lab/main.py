@@ -104,6 +104,13 @@ df = df_raw.copy()
 df['OrderDate'] = pd.to_datetime(df['OrderDate'], errors='coerce')
 df['CustomerAge'] = pd.to_numeric(df['CustomerAge'], errors='coerce')
 
+# Nulls for OrderDate 
+try:
+    mode_date = df['OrderDate'].mode()[0]
+    df['OrderDate'] = df['OrderDate'].fillna(mode_date)
+except IndexError:
+    df['OrderDate'] = df['OrderDate'].fillna(pd.to_datetime('1900-01-01'))
+
 # Normalize text columns
 df['CustomerName'] = df['CustomerName'].str.strip().str.title()
 df['Email'] = df['Email'].str.strip().str.lower()
