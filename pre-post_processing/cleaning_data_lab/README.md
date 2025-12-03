@@ -7,13 +7,13 @@ Yes, there is sensitive information. As these are customer orders, we have perso
 3. **What kind of problems can we have regarding the nature of this data?**
 During the exploration, several problems were identified:
 
-# Missing Values (incomplete data)
+ **Missing Values (incomplete data)**
 -Missing emails: 24
 -Missing phone numbers: 5
 -Missing prices: 21
 -Unknown age: 2
 
-# Text inconsistencies
+**Text inconsistencies**
 -Countries in different formats: USA, US, United States, UK
 -Emails with inconsies
 -Invalid or extreme values
