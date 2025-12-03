@@ -1,12 +1,12 @@
-1.  **How many rows do we have?**
+1.**How many rows do we have?**
 
 The dataset has a total of 189 rows.
 
-2.  **Is there sensitive information?**
+2.**Is there sensitive information?**
 
 Yes, there is sensitive information. As these are customer orders, we have personal data that is private and must be handled with care, such as: 'CustomerName', 'Email', and 'Phone'.
 
-3. **What kind of problems can we have regarding the nature of this data?**
+3.**What kind of problems can we have regarding the nature of this data?**
 
 During the exploration, several problems were identified:
 
