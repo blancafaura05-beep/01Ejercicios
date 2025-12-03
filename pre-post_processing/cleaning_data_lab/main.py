@@ -10,6 +10,8 @@ import pandas as pd
 import io
 import re
 
+pd.set_option('future.no_silent_downcasting', True) #solve warning with emails  (boleans and NaN)
+
 print("=" * 70)
 print("DATA CLEANING EXERCISE - E-COMMERCE CUSTOMER ORDERS")
 print("=" * 70)
@@ -75,7 +77,7 @@ def accuracy_age(df):
 
 def validity_email(df):
     pattern = r'^[\w\.-]+@[\w\.-]+\.\w+$'
-    return 100 * df['Email'].str.match(pattern).fillna(False).mean()
+    return 100 * df['Email'].str.match(pattern).fillna(False).infer_objects(copy=False).mean()
 
 def consistency_country(df):
     valid_countries = ['USA','UNITED KINGDOM','CANADA']
